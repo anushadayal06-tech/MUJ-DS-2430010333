@@ -26,4 +26,4 @@ The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% mac
 
 ## Reproducibility
 
-The source implementation and experiment outputs are committed. The raw image dataset and trained model checkpoint are not included. Before rerunning training, provide `capstone/data/splits.csv` and the referenced image files.
+The source implementation and experiment outputs are committed. The raw image dataset, trained model checkpoint, and environment-specific split CSV are not included. Before rerunning training, provide a compatible split CSV and the referenced image files in the local dataset environment.
