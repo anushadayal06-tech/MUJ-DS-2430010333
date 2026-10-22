@@ -13,14 +13,14 @@
 
 ## Project Overview
 
-This repository contains the implementation, documentation, experiments, and supporting material for the deepfake detection capstone project.
+This repository contains the implementation, experiments, evaluation results, and supporting documentation for the deepfake detection capstone project.
 
-> **Note:** The project-specific model architecture, dataset details, experimental results, and final performance values should be kept synchronized with the actual implementation submitted for evaluation.
+The current implementation uses image-frame classification with pretrained CNN/transformer backbones and includes adversarial robustness evaluation using FGSM and PGD attacks.
 
 ## Repository Structure
 
 ```text
-DL_Project/
+MUJ-DS-2430010333/
 ├── README.md
 ├── INSTALLATION.md
 ├── assignments/
@@ -30,9 +30,32 @@ DL_Project/
 ├── presentations/
 └── capstone/
     ├── README.md
-    ├── screenshots/
+    ├── src/
+    │   ├── model.py
+    │   ├── dataset.py
+    │   ├── train.py
+    │   ├── attacks.py
+    │   └── compare.py
+    ├── data/
+    │   └── splits.csv
     └── results/
+        ├── resnet18_metrics.json
+        ├── resnet18_train_log.csv
+        └── resnet18_robustness.csv
 ```
+
+## Results
+
+The uploaded ResNet18 evaluation reports:
+
+- Test accuracy: **92.64%**
+- Macro precision: **92.72%**
+- Macro recall: **92.51%**
+- Macro F1: **92.59%**
+- ROC-AUC: **0.982**
+- Test samples: **1,101**
+
+The repository also records FGSM and PGD robustness results across multiple attack strengths.
 
 ## Getting Started
 
@@ -40,30 +63,12 @@ See [INSTALLATION.md](INSTALLATION.md) for the environment and execution steps.
 
 ## Capstone
 
-The capstone-specific material is organized under [`capstone/`](capstone/). Source code belongs in [`code/`](code/), experiments and exploratory work in [`notebooks/`](notebooks/), supporting material in [`resources/`](resources/), and presentation material in [`presentations/`](presentations/).
+The capstone-specific implementation and evidence are organized under [`capstone/`](capstone/). The source code is under [`capstone/src/`](capstone/src/), the split metadata under [`capstone/data/`](capstone/data/), and experiment outputs under [`capstone/results/`](capstone/results/).
 
 ## Development Workflow
 
-- Use meaningful commits for every substantial update.
+- Use meaningful commits for substantial updates.
 - Develop feature work on branches rather than directly on `main`.
 - Use pull requests for review before merging.
 - Track major tasks through GitHub Issues.
-- Keep documentation updated whenever the implementation changes.
-
-## Deliverables Checklist
-
-- [ ] Source code
-- [ ] Documentation
-- [ ] Installation guide
-- [ ] Notebooks / experiments
-- [ ] Presentation
-- [ ] Screenshots / demo evidence
-- [ ] Results and evaluation
-- [ ] Meaningful commit history
-- [ ] Issues for major project tasks
-- [ ] Pull request workflow
-- [ ] Instructor added as collaborator
-
-## Academic Submission
-
-This repository is maintained as the working GitHub repository for the Batch F capstone submission. The final submission should include the required personal repository URL, capstone repository URL, presentation, and other materials specified by the training guidelines.
+- Keep documentation synchronized with the implementation.
