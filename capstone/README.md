@@ -8,7 +8,7 @@
 ## Contents
 
 - `src/` — model, dataset, training, adversarial attack, and comparison code
-- `data/` — split metadata required by the training scripts
+- `data/` — local split metadata when preparing a rerun
 - `results/` — evaluation metrics, training logs, and robustness results
 - `models/` — generated checkpoints; not committed because of size
 - `screenshots/` — reserved for final demo/evidence screenshots
@@ -19,6 +19,6 @@ The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% mac
 
 ## Reproducibility
 
-The raw image dataset and trained checkpoint are intentionally excluded. Before training from scratch, provide the required split CSV at `data/splits.csv` and the corresponding image files referenced by that CSV.
+The raw image dataset, trained checkpoint, and environment-specific split CSV are intentionally excluded. Before training from scratch, prepare a compatible split CSV and update its image paths for the local dataset environment.
 
 See the repository-level `INSTALLATION.md` for environment and execution instructions.
