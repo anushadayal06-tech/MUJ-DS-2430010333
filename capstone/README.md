@@ -1,39 +1,28 @@
-# Capstone Project
-
-## Deepfake Detection using Deep Learning
+# Capstone Project — Deepfake Detection using Deep Learning
 
 **Student:** Anusha Dayal  
 **Registration No.:** 2430010333  
 **Section:** D  
 **GitHub:** `anushadayal06-tech`
 
-### Project contents
-
-This folder contains the final capstone implementation, experiment outputs, and supporting evidence.
+## Contents
 
 - `src/` — model, dataset, training, adversarial attack, and comparison code
-- `data/` — dataset split metadata
-- `results/` — evaluation metrics, training logs, and robustness results
-- `screenshots/` — interface, prediction, training, and result screenshots when available
+- `data/` — split metadata required by the training scripts
+- `results/` — committed evaluation metrics, training logs, and robustness results
+- `models/` — generated checkpoints; not committed because of size
+- `screenshots/` — reserved for final demo/evidence screenshots
 
-### Implementation
+## Implementation
 
-The implementation supports ResNet18, EfficientNet-B0, and ViT-B/16 backbones. It also includes FGSM/PGD adversarial evaluation and optional PGD adversarial training.
+The source supports ResNet18, EfficientNet-B0, and ViT-B/16 backbones. It also includes FGSM/PGD adversarial evaluation and optional PGD adversarial training.
 
-### Current evaluation
+## Evaluation Summary
 
-The uploaded ResNet18 evaluation contains test accuracy, precision, recall, F1, specificity, ROC-AUC, a confusion matrix, and 1,101 test samples. Robustness results are recorded separately for FGSM and PGD across multiple epsilon values.
+The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% macro F1**, and **0.982 ROC-AUC** on **1,101 test samples**. Detailed metrics and robustness results are stored under `results/`.
 
-### Documentation checklist
+## Reproducibility
 
-- [ ] Problem statement
-- [ ] Objectives
-- [ ] Dataset and preprocessing
-- [ ] Model architecture
-- [ ] Training procedure
-- [ ] Evaluation methodology
-- [x] Results
-- [ ] Limitations
-- [ ] Future scope
-- [ ] Individual contribution
-- [ ] Demo / screenshots
+The repository contains the source implementation and experiment outputs. The raw image dataset and trained checkpoint are intentionally excluded. Before training from scratch, provide the required split CSV at `data/splits.csv` and the corresponding image files referenced by that CSV.
+
+See the repository-level `INSTALLATION.md` for environment and execution instructions.
