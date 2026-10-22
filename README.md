@@ -7,7 +7,7 @@
 | **Name** | Anusha Dayal |
 | **Registration Number** | 2430010333 |
 | **Branch** | Data Science |
-| **Batch** | F |
+| **Section** | D |
 | **GitHub Username** | anushadayal06-tech |
 | **Project Type** | Deep Learning Capstone Project |
 
