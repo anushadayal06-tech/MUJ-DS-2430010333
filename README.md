@@ -14,13 +14,9 @@
 
 This repository contains the implementation, experiment outputs, literature review, presentation, and supporting documentation for the deepfake detection capstone project.
 
-The implementation uses pretrained deep-learning backbones for image-frame classification and includes FGSM/PGD adversarial evaluation and optional PGD adversarial training.
-
 ## Reported Results
 
-The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% macro F1**, and **0.982 ROC-AUC** on **1,101 test samples**.
-
-FGSM and PGD robustness results are included under `capstone/results/`.
+The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% macro F1**, and **0.982 ROC-AUC** on **1,101 test samples**. FGSM and PGD robustness results are included under `capstone/results/`.
 
 ## Supporting Material
 
@@ -31,7 +27,3 @@ FGSM and PGD robustness results are included under `capstone/results/`.
 ## Reproducibility Note
 
 The source implementation and experiment outputs are committed. The raw image dataset and trained model checkpoint are not included in the repository. The split metadata used by the training scripts should be available at `capstone/data/splits.csv` together with the image files referenced by that CSV before rerunning training.
-
-## Development Workflow
-
-Feature work is developed on branches and merged through pull requests. Major project tasks are tracked through GitHub Issues, and documentation is kept alongside the implementation.
