@@ -4,14 +4,17 @@
 
 - Python 3.9+
 - Git
+- PyTorch and torchvision
+- Pillow
+- Matplotlib
 - A working deep-learning environment compatible with the packages used by the project
-- Optional GPU/CUDA support if required by the model
+- Optional GPU/CUDA support
 
 ## 2. Clone the Repository
 
 ```bash
-git clone https://github.com/anushadayal06-tech/DL_Project.git
-cd DL_Project
+git clone https://github.com/anushadayal06-tech/MUJ-DS-2430010333.git
+cd MUJ-DS-2430010333
 ```
 
 ## 3. Create a Virtual Environment
@@ -32,33 +35,50 @@ source .venv/bin/activate
 
 ## 4. Install Dependencies
 
-If the repository contains a `requirements.txt` file:
+Install the packages required by the source code:
 
 ```bash
-pip install -r requirements.txt
+pip install torch torchvision pillow matplotlib
 ```
 
-If it does not yet contain one, install the dependencies specified by the project notebook/source code and then freeze the working environment:
+## 5. Project Layout
+
+The capstone implementation is under `capstone/`:
+
+```text
+capstone/
+├── src/
+│   ├── model.py
+│   ├── dataset.py
+│   ├── train.py
+│   ├── attacks.py
+│   └── compare.py
+├── data/
+│   └── splits.csv
+└── results/
+```
+
+## 6. Running Training
+
+From the repository root:
 
 ```bash
-pip freeze > requirements.txt
+cd capstone
+python src/train.py --arch resnet18
 ```
 
-## 5. Run the Project
+Other supported architectures are `efficientnet_b0` and `vit_b_16`. PGD adversarial training can be enabled with `--adv`.
 
-Run the project's main script from the location documented in the source code, or open the relevant notebook under `notebooks/`.
+## 7. Adversarial Evaluation
 
-The exact model entry point and dataset preparation command are intentionally not invented here; they should match the actual implementation committed to this repository.
+After the required trained checkpoint is available under `capstone/models/`, run:
 
-## 6. Reproducibility
+```bash
+python src/attacks.py --arch resnet18 --name resnet18
+```
 
-For a reproducible submission, document:
+The script evaluates FGSM and PGD over the configured epsilon sweep.
 
-- Dataset source and access instructions
-- Preprocessing steps
-- Training configuration
-- Model architecture
-- Hyperparameters
-- Hardware used
-- Evaluation metrics
-- Expected output / result location
+## 8. Reproducibility
+
+For a reproducible submission, document the dataset source/access, preprocessing, split construction, training configuration, model architecture, hyperparameters, hardware, and evaluation protocol used to produce the committed results.
