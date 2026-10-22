@@ -13,10 +13,6 @@
 - `models/` — generated checkpoints; not committed because of size
 - `screenshots/` — reserved for final demo/evidence screenshots
 
-## Implementation
-
-The source supports ResNet18, EfficientNet-B0, and ViT-B/16 backbones. It also includes FGSM/PGD adversarial evaluation and optional PGD adversarial training.
-
 ## Evaluation Summary
 
 The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% macro F1**, and **0.982 ROC-AUC** on **1,101 test samples**. Detailed metrics and robustness results are stored under `results/`.
