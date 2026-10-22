@@ -14,7 +14,7 @@
 
 This repository contains the implementation, experiment outputs, literature review, presentation, and supporting documentation for the deepfake detection capstone project.
 
-## Reported Results
+## Results
 
 The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% macro F1**, and **0.982 ROC-AUC** on **1,101 test samples**. FGSM and PGD robustness results are included under `capstone/results/`.
 
@@ -24,6 +24,6 @@ The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% mac
 - [Capstone Presentation](presentations/capstone_presentation.pptx)
 - [Installation & Execution Guide](INSTALLATION.md)
 
-## Reproducibility Note
+## Reproducibility
 
-The source implementation and experiment outputs are committed. The raw image dataset and trained model checkpoint are not included in the repository. The split metadata used by the training scripts should be available at `capstone/data/splits.csv` together with the image files referenced by that CSV before rerunning training.
+The source implementation and experiment outputs are committed. The raw image dataset and trained model checkpoint are not included. Before rerunning training, provide `capstone/data/splits.csv` and the referenced image files.
