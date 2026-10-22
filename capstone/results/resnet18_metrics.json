@@ -1,0 +1,11 @@
+{
+  "model": "resnet18",
+  "accuracy": 0.9264305177111717,
+  "precision_macro": 0.927243927138993,
+  "recall_macro": 0.9250773901457652,
+  "f1_macro": 0.9259356150356157,
+  "specificity": 0.9046692607003891,
+  "roc_auc": 0.9816384836171524,
+  "confusion_matrix": [[465, 49], [32, 555]],
+  "n_test_samples": 1101
+}
