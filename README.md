@@ -16,35 +16,6 @@ This repository contains the implementation, experiment outputs, literature revi
 
 The implementation uses pretrained deep-learning backbones for image-frame classification and includes FGSM/PGD adversarial evaluation and optional PGD adversarial training.
 
-## Repository Structure
-
-```text
-MUJ-DS-2430010333/
-├── README.md
-├── INSTALLATION.md
-├── assignments/
-├── notebooks/
-├── code/
-├── resources/
-│   └── literature_review.xlsx
-├── presentations/
-│   └── capstone_presentation.pptx
-└── capstone/
-    ├── README.md
-    ├── src/
-    │   ├── model.py
-    │   ├── dataset.py
-    │   ├── train.py
-    │   ├── attacks.py
-    │   └── compare.py
-    ├── data/
-    ├── models/
-    └── results/
-        ├── resnet18_metrics.json
-        ├── resnet18_train_log.csv
-        └── resnet18_robustness.csv
-```
-
 ## Reported Results
 
 The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% macro F1**, and **0.982 ROC-AUC** on **1,101 test samples**.
