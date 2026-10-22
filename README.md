@@ -38,7 +38,6 @@ MUJ-DS-2430010333/
     │   ├── attacks.py
     │   └── compare.py
     ├── data/
-    │   └── splits.csv
     ├── models/
     └── results/
         ├── resnet18_metrics.json
