@@ -13,7 +13,7 @@
 
 ## Project Overview
 
-This repository contains the implementation, experiments, evaluation results, and supporting documentation for the deepfake detection capstone project.
+This repository contains the implementation, experiments, evaluation results, literature review, presentation, and supporting documentation for the deepfake detection capstone project.
 
 The current implementation uses image-frame classification with pretrained CNN/transformer backbones and includes adversarial robustness evaluation using FGSM and PGD attacks.
 
@@ -27,7 +27,11 @@ MUJ-DS-2430010333/
 ├── notebooks/
 ├── code/
 ├── resources/
+│   ├── literature_review.xlsx
+│   └── README.md
 ├── presentations/
+│   ├── capstone_presentation.pptx
+│   └── README.md
 └── capstone/
     ├── README.md
     ├── src/
@@ -36,8 +40,6 @@ MUJ-DS-2430010333/
     │   ├── train.py
     │   ├── attacks.py
     │   └── compare.py
-    ├── data/
-    │   └── splits.csv
     └── results/
         ├── resnet18_metrics.json
         ├── resnet18_train_log.csv
@@ -46,7 +48,7 @@ MUJ-DS-2430010333/
 
 ## Results
 
-The uploaded ResNet18 evaluation reports:
+The ResNet18 evaluation reports:
 
 - Test accuracy: **92.64%**
 - Macro precision: **92.72%**
@@ -57,13 +59,18 @@ The uploaded ResNet18 evaluation reports:
 
 The repository also records FGSM and PGD robustness results across multiple attack strengths.
 
+## Supporting Material
+
+- [Literature Review](resources/literature_review.xlsx)
+- [Capstone Presentation](presentations/capstone_presentation.pptx)
+
 ## Getting Started
 
 See [INSTALLATION.md](INSTALLATION.md) for the environment and execution steps.
 
 ## Capstone
 
-The capstone-specific implementation and evidence are organized under [`capstone/`](capstone/). The source code is under [`capstone/src/`](capstone/src/), the split metadata under [`capstone/data/`](capstone/data/), and experiment outputs under [`capstone/results/`](capstone/results/).
+The capstone implementation and evidence are organized under [`capstone/`](capstone/). Source code is under [`capstone/src/`](capstone/src/) and experiment outputs are under [`capstone/results/`](capstone/results/).
 
 ## Development Workflow
 
