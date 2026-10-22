@@ -7,8 +7,7 @@
 - PyTorch and torchvision
 - Pillow
 - Matplotlib
-- A working deep-learning environment compatible with the packages used by the project
-- Optional GPU/CUDA support
+- Optional CUDA-compatible GPU
 
 ## 2. Clone the Repository
 
@@ -35,50 +34,44 @@ source .venv/bin/activate
 
 ## 4. Install Dependencies
 
-Install the packages required by the source code:
-
 ```bash
 pip install torch torchvision pillow matplotlib
 ```
 
 ## 5. Project Layout
 
-The capstone implementation is under `capstone/`:
+The implementation is under `capstone/`:
 
 ```text
 capstone/
 ├── src/
-│   ├── model.py
-│   ├── dataset.py
-│   ├── train.py
-│   ├── attacks.py
-│   └── compare.py
 ├── data/
 │   └── splits.csv
+├── models/
 └── results/
 ```
 
-## 6. Running Training
+The raw image dataset and trained checkpoint are not committed. The split CSV must reference image files available in the local dataset environment.
 
-From the repository root:
+## 6. Training
+
+After placing the required split CSV at `capstone/data/splits.csv` and making the referenced images available:
 
 ```bash
 cd capstone
 python src/train.py --arch resnet18
 ```
 
-Other supported architectures are `efficientnet_b0` and `vit_b_16`. PGD adversarial training can be enabled with `--adv`.
+Supported architectures are `resnet18`, `efficientnet_b0`, and `vit_b_16`. PGD adversarial training can be enabled with `--adv`.
 
 ## 7. Adversarial Evaluation
 
-After the required trained checkpoint is available under `capstone/models/`, run:
+After a compatible trained checkpoint is available under `capstone/models/`:
 
 ```bash
 python src/attacks.py --arch resnet18 --name resnet18
 ```
 
-The script evaluates FGSM and PGD over the configured epsilon sweep.
-
 ## 8. Reproducibility
 
-For a reproducible submission, document the dataset source/access, preprocessing, split construction, training configuration, model architecture, hyperparameters, hardware, and evaluation protocol used to produce the committed results.
+For a full rerun, use the same dataset/split metadata, preprocessing, model configuration, hyperparameters, hardware setup, and evaluation protocol used for the committed experiment results.
