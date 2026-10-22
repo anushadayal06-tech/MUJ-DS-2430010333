@@ -47,14 +47,7 @@ MUJ-DS-2430010333/
 
 ## Reported Results
 
-The committed ResNet18 evaluation reports:
-
-- **Test accuracy:** 92.64%
-- **Macro precision:** 92.72%
-- **Macro recall:** 92.51%
-- **Macro F1:** 92.59%
-- **ROC-AUC:** 0.982
-- **Test samples:** 1,101
+The committed ResNet18 evaluation reports **92.64% test accuracy**, **92.59% macro F1**, and **0.982 ROC-AUC** on **1,101 test samples**.
 
 FGSM and PGD robustness results are included under `capstone/results/`.
 
