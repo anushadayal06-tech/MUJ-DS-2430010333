@@ -46,16 +46,15 @@ The implementation is under `capstone/`:
 capstone/
 ├── src/
 ├── data/
-│   └── splits.csv
 ├── models/
 └── results/
 ```
 
-The raw image dataset and trained checkpoint are not committed. The split CSV must reference image files available in the local dataset environment.
+The raw image dataset, trained checkpoint, and environment-specific split CSV are not committed. The split metadata used for the experiment must be adapted to the local dataset paths before rerunning training.
 
 ## 6. Training
 
-After placing the required split CSV at `capstone/data/splits.csv` and making the referenced images available:
+After preparing a compatible split CSV and making the referenced images available:
 
 ```bash
 cd capstone
